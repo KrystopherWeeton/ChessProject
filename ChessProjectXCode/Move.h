@@ -2,11 +2,13 @@
 #define Move_H
 
 #include "Location.h"
+#include "Storable.h"
+#include <string>
 
-class Move {
+class Move: public Storable {
 public:
-    const Location from;
-    const Location to;
+    const Location from;    // The location we are moving from
+    const Location to;      // The location we are moving to
     
     Move(Location from = Location(0,0), Location to = Location(0,0)) : from(from), to(to) { }
     
@@ -31,9 +33,5 @@ public:
         return output;
     }
 };
-
-const Move QUEEN_CASTLE(0,0);
-const Move KING_CASTLE(7,7);
-const Move EXIT(-1, -1);
 
 #endif

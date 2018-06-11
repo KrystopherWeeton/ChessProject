@@ -8,8 +8,8 @@
 class Location {
 private:
 public:
-    const int x;
-    const int y;
+    const int x;    // The X position 0 - 7
+    const int y;    // The Y position 0 - 7
     
     Location(int x = 0, int y = 0) : x(x), y(y) {}
     
@@ -39,11 +39,10 @@ public:
     
     friend std::ostream& operator<<(std::ostream& output, Location rhs) {
         output << (char)(97 + rhs.x) << (rhs.y + 1);
-        
         return output;
     }
     
-    std::string toString() const {
+    operator std::string() const {
         return {(char)(97 + x), (char)(y + '1')};
     }
 };

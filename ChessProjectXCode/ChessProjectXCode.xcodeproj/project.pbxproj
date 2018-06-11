@@ -12,7 +12,6 @@
 		37AE447020CA60DA00C8EAE0 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AE445B20CA60DA00C8EAE0 /* GameManager.cpp */; };
 		37AE447120CA60DA00C8EAE0 /* GameStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AE445D20CA60DA00C8EAE0 /* GameStorage.cpp */; };
 		37AE447220CA60DA00C8EAE0 /* globalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AE445F20CA60DA00C8EAE0 /* globalFunctions.cpp */; };
-		37AE447320CA60DA00C8EAE0 /* RAFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AE446920CA60DA00C8EAE0 /* RAFile.cpp */; };
 		37AE447420CA60DA00C8EAE0 /* UIManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AE446C20CA60DA00C8EAE0 /* UIManager.cpp */; };
 		37AE447620CA612100C8EAE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AE447520CA612100C8EAE0 /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -30,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		370C0D9F20CE385D00A90825 /* Storable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storable.h; sourceTree = "<group>"; };
+		370C0DA120CE38E400A90825 /* SpecMoves.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecMoves.h; sourceTree = "<group>"; };
 		37AE43FB20CA602700C8EAE0 /* ChessProjectXCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChessProjectXCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AE445520CA60DA00C8EAE0 /* AnalysisManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnalysisManager.cpp; path = ../AnalysisManager.cpp; sourceTree = "<group>"; };
 		37AE445620CA60DA00C8EAE0 /* AnalysisManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnalysisManager.h; path = ../AnalysisManager.h; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		37AE446620CA60DA00C8EAE0 /* Piece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Piece.h; path = ../Piece.h; sourceTree = "<group>"; };
 		37AE446720CA60DA00C8EAE0 /* PieceSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PieceSet.h; path = ../PieceSet.h; sourceTree = "<group>"; };
 		37AE446820CA60DA00C8EAE0 /* Queen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queen.h; path = ../Queen.h; sourceTree = "<group>"; };
-		37AE446920CA60DA00C8EAE0 /* RAFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RAFile.cpp; path = ../RAFile.cpp; sourceTree = "<group>"; };
 		37AE446A20CA60DA00C8EAE0 /* RAFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RAFile.h; path = ../RAFile.h; sourceTree = "<group>"; };
 		37AE446B20CA60DA00C8EAE0 /* Rook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rook.h; path = ../Rook.h; sourceTree = "<group>"; };
 		37AE446C20CA60DA00C8EAE0 /* UIManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIManager.cpp; path = ../UIManager.cpp; sourceTree = "<group>"; };
@@ -70,6 +70,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		370C0D9A20CE325800A90825 /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				37AE446620CA60DA00C8EAE0 /* Piece.h */,
+				37AE446720CA60DA00C8EAE0 /* PieceSet.h */,
+				37AE446820CA60DA00C8EAE0 /* Queen.h */,
+				37AE446B20CA60DA00C8EAE0 /* Rook.h */,
+				37AE446120CA60DA00C8EAE0 /* King.h */,
+				37AE446220CA60DA00C8EAE0 /* Knight.h */,
+				37AE446520CA60DA00C8EAE0 /* Pawn.h */,
+				37AE445720CA60DA00C8EAE0 /* Bishop.h */,
+			);
+			name = Pieces;
+			sourceTree = "<group>";
+		};
+		370C0D9B20CE356300A90825 /* Actual Long Term Shit */ = {
+			isa = PBXGroup;
+			children = (
+				370C0D9D20CE36D500A90825 /* Basic Functionality */,
+				370C0D9A20CE325800A90825 /* Pieces */,
+				370C0D9C20CE356D00A90825 /* Managers */,
+			);
+			name = "Actual Long Term Shit";
+			sourceTree = "<group>";
+		};
+		370C0D9C20CE356D00A90825 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				37AE446D20CA60DA00C8EAE0 /* UIManager.h */,
+				37AE446C20CA60DA00C8EAE0 /* UIManager.cpp */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		370C0D9D20CE36D500A90825 /* Basic Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				370C0DA420CE39AB00A90825 /* Random Functionality */,
+				370C0DA320CE399200A90825 /* Board Functionality */,
+				370C0DA220CE392B00A90825 /* Storables */,
+				37AE446320CA60DA00C8EAE0 /* Location.h */,
+			);
+			name = "Basic Functionality";
+			sourceTree = "<group>";
+		};
+		370C0DA220CE392B00A90825 /* Storables */ = {
+			isa = PBXGroup;
+			children = (
+				370C0D9F20CE385D00A90825 /* Storable.h */,
+				37AE446420CA60DA00C8EAE0 /* Move.h */,
+				370C0DA120CE38E400A90825 /* SpecMoves.h */,
+			);
+			name = Storables;
+			sourceTree = "<group>";
+		};
+		370C0DA320CE399200A90825 /* Board Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				37AE445820CA60DA00C8EAE0 /* ChessBoard.cpp */,
+				37AE445920CA60DA00C8EAE0 /* ChessBoard.h */,
+			);
+			name = "Board Functionality";
+			sourceTree = "<group>";
+		};
+		370C0DA420CE39AB00A90825 /* Random Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				37AE446A20CA60DA00C8EAE0 /* RAFile.h */,
+				37AE445F20CA60DA00C8EAE0 /* globalFunctions.cpp */,
+				37AE446020CA60DA00C8EAE0 /* globalFunctions.h */,
+			);
+			name = "Random Functionality";
+			sourceTree = "<group>";
+		};
 		37AE43F220CA602700C8EAE0 = {
 			isa = PBXGroup;
 			children = (
@@ -89,32 +163,15 @@
 		37AE43FD20CA602700C8EAE0 /* ChessProjectXCode */ = {
 			isa = PBXGroup;
 			children = (
+				370C0D9B20CE356300A90825 /* Actual Long Term Shit */,
 				37AE445520CA60DA00C8EAE0 /* AnalysisManager.cpp */,
 				37AE445620CA60DA00C8EAE0 /* AnalysisManager.h */,
-				37AE445720CA60DA00C8EAE0 /* Bishop.h */,
-				37AE445820CA60DA00C8EAE0 /* ChessBoard.cpp */,
-				37AE445920CA60DA00C8EAE0 /* ChessBoard.h */,
 				37AE445A20CA60DA00C8EAE0 /* DecodeReturn.h */,
 				37AE445B20CA60DA00C8EAE0 /* GameManager.cpp */,
 				37AE445C20CA60DA00C8EAE0 /* GameManager.h */,
 				37AE445D20CA60DA00C8EAE0 /* GameStorage.cpp */,
 				37AE445E20CA60DA00C8EAE0 /* GameStorage.h */,
-				37AE445F20CA60DA00C8EAE0 /* globalFunctions.cpp */,
-				37AE446020CA60DA00C8EAE0 /* globalFunctions.h */,
-				37AE446120CA60DA00C8EAE0 /* King.h */,
-				37AE446220CA60DA00C8EAE0 /* Knight.h */,
-				37AE446320CA60DA00C8EAE0 /* Location.h */,
-				37AE446420CA60DA00C8EAE0 /* Move.h */,
-				37AE446520CA60DA00C8EAE0 /* Pawn.h */,
-				37AE446620CA60DA00C8EAE0 /* Piece.h */,
-				37AE446720CA60DA00C8EAE0 /* PieceSet.h */,
-				37AE446820CA60DA00C8EAE0 /* Queen.h */,
-				37AE446920CA60DA00C8EAE0 /* RAFile.cpp */,
-				37AE446A20CA60DA00C8EAE0 /* RAFile.h */,
-				37AE446B20CA60DA00C8EAE0 /* Rook.h */,
-				37AE446C20CA60DA00C8EAE0 /* UIManager.cpp */,
 				37AE447520CA612100C8EAE0 /* main.cpp */,
-				37AE446D20CA60DA00C8EAE0 /* UIManager.h */,
 			);
 			path = ChessProjectXCode;
 			sourceTree = "<group>";
@@ -177,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AE447420CA60DA00C8EAE0 /* UIManager.cpp in Sources */,
-				37AE447320CA60DA00C8EAE0 /* RAFile.cpp in Sources */,
 				37AE446E20CA60DA00C8EAE0 /* AnalysisManager.cpp in Sources */,
 				37AE447020CA60DA00C8EAE0 /* GameManager.cpp in Sources */,
 				37AE447220CA60DA00C8EAE0 /* globalFunctions.cpp in Sources */,
@@ -312,6 +368,7 @@
 				37AE440420CA602700C8EAE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

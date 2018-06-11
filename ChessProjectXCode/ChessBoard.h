@@ -164,7 +164,7 @@ public:
     }
     
     //Checks the legality of the move, and then performs it
-    Legality doMove(bool whitesTurn, const Move& m, int& points);
+    Legality doMove(bool whitesTurn, const Storable& m, int& points);
 };
 
 #endif
