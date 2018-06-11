@@ -99,7 +99,7 @@ std::string globalFunctions::createGameEntry(RAFile<Move>& file, ChessBoard boar
     
     // Gathers the basic string, that we can add to or remove from if necessary
     std::string moveString = (board.at(to) == nullptr) ? "" : "x";
-    moveString.append(to.toString());
+    moveString.append(static_cast<std::string>(to));
     
     // Gathers the possible locations for the move to have come from
     std::vector<Location> locations = board.gatherFromLocations(to.x, to.y, p->getIdentifier(), whiteTurn);

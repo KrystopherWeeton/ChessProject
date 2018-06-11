@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <algorithm>
 #include <string>
-#include "Storable.h"
 
 const std::string ChessBoard::resetColor =  "\033[0m";                 //default color
 const std::string ChessBoard::labelColor = "\033[1m\033[31m";       //Bold Red
@@ -721,7 +720,7 @@ bool ChessBoard::testMove(Move m, std::function<bool ()> func) {
     return b;
 }
 
-Legality ChessBoard::doMove(bool whitesTurn, const Storable &m, int& points) {
+Legality ChessBoard::doMove(bool whitesTurn, const Move &m, int& points) {
     
     // Checks the legality of the move and returns the appropriate result
     Legality isMoveLegal = isLegal(whitesTurn, m);

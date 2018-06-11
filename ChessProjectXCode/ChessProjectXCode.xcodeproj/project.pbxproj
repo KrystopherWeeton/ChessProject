@@ -29,8 +29,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		370C0D9F20CE385D00A90825 /* Storable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storable.h; sourceTree = "<group>"; };
-		370C0DA120CE38E400A90825 /* SpecMoves.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecMoves.h; sourceTree = "<group>"; };
 		37AE43FB20CA602700C8EAE0 /* ChessProjectXCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChessProjectXCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AE445520CA60DA00C8EAE0 /* AnalysisManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnalysisManager.cpp; path = ../AnalysisManager.cpp; sourceTree = "<group>"; };
 		37AE445620CA60DA00C8EAE0 /* AnalysisManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnalysisManager.h; path = ../AnalysisManager.h; sourceTree = "<group>"; };
@@ -109,20 +107,9 @@
 			children = (
 				370C0DA420CE39AB00A90825 /* Random Functionality */,
 				370C0DA320CE399200A90825 /* Board Functionality */,
-				370C0DA220CE392B00A90825 /* Storables */,
 				37AE446320CA60DA00C8EAE0 /* Location.h */,
 			);
 			name = "Basic Functionality";
-			sourceTree = "<group>";
-		};
-		370C0DA220CE392B00A90825 /* Storables */ = {
-			isa = PBXGroup;
-			children = (
-				370C0D9F20CE385D00A90825 /* Storable.h */,
-				37AE446420CA60DA00C8EAE0 /* Move.h */,
-				370C0DA120CE38E400A90825 /* SpecMoves.h */,
-			);
-			name = Storables;
 			sourceTree = "<group>";
 		};
 		370C0DA320CE399200A90825 /* Board Functionality */ = {
@@ -130,6 +117,7 @@
 			children = (
 				37AE445820CA60DA00C8EAE0 /* ChessBoard.cpp */,
 				37AE445920CA60DA00C8EAE0 /* ChessBoard.h */,
+				37AE446420CA60DA00C8EAE0 /* Move.h */,
 			);
 			name = "Board Functionality";
 			sourceTree = "<group>";
